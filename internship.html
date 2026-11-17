@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yahya Hmito, Marsa Maroc internship</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Portfolio of Yahya Hmito, engineering student at Toulouse INP-ENSEEIHT.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html">Yahya Hmito</a>
+  <nav class="site-nav" aria-label="Main navigation"><a href="engineering.html">Engineering</a><a href="projects.html">Projects</a><a href="career.html" aria-current="page">Career</a><a href="engagement.html">Engagement</a><a href="contact.html">Contact</a></nav>
+</div></header>
+<main>
+<section class="page-head"><div class="wrap"><p class="crumb"><a href="career.html">Career development</a> / Internship</p><h1>Spare parts criticality for a ZPMC crane</h1><svg class="trace" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 18 H130 L144 6 H220"/><circle cx="228" cy="6" r="5"/></svg><p class="lead">Internship at Marsa Maroc, port of Safi, from 6 July to 15 August 2026.</p><div class="actions"><a class="btn primary" href="rapport-stage-marsa-maroc.pdf" target="_blank" rel="noopener">Read my internship report (PDF, in French)</a></div></div></section>
+<section class="section"><div class="wrap cols">
+  <dl class="facts">
+    <dt>Context</dt><dd>Six weeks in the maintenance department of Marsa Maroc in Safi, on a ZPMC crane at the port's sulphur terminal. Supervisors: Mohamed Rojhani and Hassan Belakhdar.</dd>
+    <dt>Problem</dt><dd>When a part fails and the replacement is not in stock, the crane can stop for weeks. Keeping every part in stock is too expensive, so the team needs to know which parts matter most.</dd>
+    <dt>Method</dt><dd>A multi-criteria ABC classification. Each part gets a score of 0, 2, 4 or 8 on five criteria, and the sum of the five scores gives its class.</dd>
+    <dt>Skills developed</dt><dd>Industrial maintenance, criticality analysis, reading technical documentation, and writing a report in LaTeX.</dd>
+  </dl>
+  <div class="note">
+    <h3>From total score to class</h3>
+    <div class="tablewrap"><table class="matrix">
+      <thead><tr><th>Class</th><th>Criticality</th><th>Total score</th></tr></thead>
+      <tbody>
+        <tr><td><span class="cls s0">d</span></td><td>Low</td><td class="num">0 to 4</td></tr>
+        <tr><td><span class="cls s1">B</span></td><td>Moderate</td><td class="num">5 to 14</td></tr>
+        <tr><td><span class="cls s2">A</span></td><td>High</td><td class="num">15 to 29</td></tr>
+        <tr><td><span class="cls s3">AA</span></td><td>Critical</td><td class="num">30 to 40</td></tr>
+      </tbody></table></div>
+  </div>
+</div></section>
+<section class="section"><div class="wrap">
+  <h2>Results</h2>
+  <div class="stats">
+    <div class="stat"><strong>41</strong><span>spare parts analysed</span></div>
+    <div class="stat"><strong>10</strong><span>rated critical (AA)</span></div>
+    <div class="stat"><strong>31</strong><span>rated high (A)</span></div>
+    <div class="stat"><strong>32</strong><span>highest total score, out of 40</span></div>
+  </div>
+  <div class="chart">
+    <h3>How the 41 parts scored on each criterion</h3>
+    <p class="legend"><span><i class="s0"></i>Score 0</span><span><i class="s1"></i>Score 2</span><span><i class="s2"></i>Score 4</span><span><i class="s3"></i>Score 8</span></p>
+    <div class="bar-row"><span class="bar-l">Safety and environment</span><div class="bar" role="img" aria-label="Safety and environment: 14 parts scored 0, 14 scored 2, 11 scored 4, 2 scored 8"><span class="s0" style="flex:14">14</span><span class="s1" style="flex:14">14</span><span class="s2" style="flex:11">11</span><span class="s3" style="flex:2"></span></div></div><div class="bar-row"><span class="bar-l">Impact on operations</span><div class="bar" role="img" aria-label="Impact on operations: 6 parts scored 0, 9 scored 2, 14 scored 4, 12 scored 8"><span class="s0" style="flex:6">6</span><span class="s1" style="flex:9">9</span><span class="s2" style="flex:14">14</span><span class="s3" style="flex:12">12</span></div></div><div class="bar-row"><span class="bar-l">Type of replacement</span><div class="bar" role="img" aria-label="Type of replacement: 0 parts scored 0, 0 scored 2, 0 scored 4, 41 scored 8"><span class="s3" style="flex:41">41</span></div></div><div class="bar-row"><span class="bar-l">Procurement cost</span><div class="bar" role="img" aria-label="Procurement cost: 3 parts scored 0, 14 scored 2, 21 scored 4, 3 scored 8"><span class="s0" style="flex:3">3</span><span class="s1" style="flex:14">14</span><span class="s2" style="flex:21">21</span><span class="s3" style="flex:3">3</span></div></div><div class="bar-row"><span class="bar-l">Delivery time</span><div class="bar" role="img" aria-label="Delivery time: 0 parts scored 0, 10 scored 2, 2 scored 4, 29 scored 8"><span class="s1" style="flex:10">10</span><span class="s2" style="flex:2"></span><span class="s3" style="flex:29">29</span></div></div>
+  </div>
+  <p class="after">Every part is replaced only after a failure, and 29 of the 41 take more than a month to deliver. The highest score went to parts such as the VCM-Manager Master card, the core of the crane's control system: if it fails, the whole crane stops. With this ranking, Marsa Maroc can set its safety stock where a missing part would cost the most.</p>
+</div></section>
+<section class="section"><div class="wrap">
+  <h2>On site</h2>
+  <div class="gallery">
+    <figure><img src="crane-1.jpg" alt="ZPMC crane seen from below" loading="lazy"><figcaption>The ZPMC crane studied, at the sulphur terminal.</figcaption></figure>
+    <figure><img src="cabinet.jpg" alt="Low-voltage control cabinet" loading="lazy"><figcaption>Low-voltage control and distribution cabinet.</figcaption></figure>
+    <figure><img src="desk-main.jpg" alt="Main control desk with emergency stop" loading="lazy"><figcaption>Main control desk and emergency stop in the cab.</figcaption></figure>
+    <figure><img src="hmi-alarms.jpg" alt="Siemens HMI alarm log" loading="lazy"><figcaption>Siemens HMI alarm log in the electrical room.</figcaption></figure>
+    <figure><img src="drive.jpg" alt="Inside of a variable speed drive" loading="lazy"><figcaption>Inside the variable speed drive and its power board.</figcaption></figure>
+    <figure><img src="et200m.jpg" alt="Siemens SIMATIC ET 200M remote I/O station" loading="lazy"><figcaption>Siemens SIMATIC ET 200M remote I/O station.</figcaption></figure>
+  </div>
+  <p class="pager"><a href="career.html">Back to career development</a><a href="projects.html">All projects</a></p>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap"><span>Yahya Hmito</span><span>Toulouse INP-ENSEEIHT, 3EA department</span></div></footer>
+<script>
+(function () {
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var ok = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
+      var sel = function () { var r = document.createRange(); r.selectNodeContents(b.previousElementSibling); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+      try { navigator.clipboard.writeText(b.getAttribute('data-copy')).then(ok, sel); } catch (e) { sel(); }
+    });
+  });
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js-motion');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  document.querySelectorAll('.rows > *, .duo > *, .steps > li, .gallery > *, .stats > *, .feature, .chart, .cols > *').forEach(function (el) {
+    if (el.getBoundingClientRect().top < innerHeight * 0.92) return;
+    var i = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+    el.style.setProperty('--d', Math.min(i, 5) * 0.07 + 's');
+    el.classList.add('reveal'); io.observe(el);
+  });
+})();
+</script>
+</body>
+</html>

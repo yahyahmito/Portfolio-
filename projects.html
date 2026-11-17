@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yahya Hmito, projects</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Portfolio of Yahya Hmito, engineering student at Toulouse INP-ENSEEIHT.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html">Yahya Hmito</a>
+  <nav class="site-nav" aria-label="Main navigation"><a href="engineering.html">Engineering</a><a href="projects.html" aria-current="page">Projects</a><a href="career.html">Career</a><a href="engagement.html">Engagement</a><a href="contact.html">Contact</a></nav>
+</div></header>
+<main>
+<section class="page-head"><div class="wrap"><h1>Projects</h1><svg class="trace" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 18 H130 L144 6 H220"/><circle cx="228" cy="6" r="5"/></svg><p class="lead">An industrial study from my internship, and two programming projects.</p></div></section>
+<section class="section"><div class="wrap">
+  <a class="feature" href="internship.html">
+    <img src="crane-2.jpg" alt="The ZPMC crane at the sulphur terminal of Safi port, seen from below" loading="lazy">
+    <div><h2>Spare parts criticality for a ZPMC crane</h2>
+    <p class="when">Internship at Marsa Maroc, summer 2026</p>
+    <p>41 spare parts scored on five criteria and ranked from low to critical, so the maintenance team knows what to keep in stock.</p>
+    <span class="link">Read the case study</span></div>
+  </a>
+  <div class="duo">
+    <article class="proj"><div class="tile"><svg viewBox="0 0 160 100" aria-hidden="true" focusable="false"><g fill="currentColor"><rect x="20" y="60" width="16" height="16" rx="3"/><rect x="38" y="60" width="16" height="16" rx="3"/><rect x="56" y="60" width="16" height="16" rx="3"/><rect x="56" y="42" width="16" height="16" rx="3"/><rect x="56" y="24" width="16" height="16" rx="3"/><rect x="74" y="24" width="16" height="16" rx="3"/><rect x="92" y="24" width="16" height="16" rx="5"/></g><circle class="gold" cx="130" cy="32" r="7"/></svg></div><h3>Snake game in C</h3><p>The classic Snake game, written in C: the snake moves around a grid and grows each time it eats.</p><ul class="chips"><li>C</li></ul></article>
+    <article class="proj"><div class="tile"><svg viewBox="0 0 160 100" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M20 50h20l5-10 8 20 8-20 8 20 5-10h16"/><path d="M90 50h10M100 36v28M108 36v28M108 50h12"/><path d="M120 50h20v30H20V50"/></g><circle class="gold" cx="20" cy="50" r="5"/><circle class="gold" cx="140" cy="50" r="5"/></svg></div><h3>Circuit simulator in C++</h3><p>A small simulator of electrical circuits written in C++, linking programming with my electronics department.</p><ul class="chips"><li>C++</li><li>Electronics</li></ul></article>
+  </div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap"><span>Yahya Hmito</span><span>Toulouse INP-ENSEEIHT, 3EA department</span></div></footer>
+<script>
+(function () {
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var ok = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
+      var sel = function () { var r = document.createRange(); r.selectNodeContents(b.previousElementSibling); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+      try { navigator.clipboard.writeText(b.getAttribute('data-copy')).then(ok, sel); } catch (e) { sel(); }
+    });
+  });
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js-motion');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  document.querySelectorAll('.rows > *, .duo > *, .steps > li, .gallery > *, .stats > *, .feature, .chart, .cols > *').forEach(function (el) {
+    if (el.getBoundingClientRect().top < innerHeight * 0.92) return;
+    var i = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+    el.style.setProperty('--d', Math.min(i, 5) * 0.07 + 's');
+    el.classList.add('reveal'); io.observe(el);
+  });
+})();
+</script>
+</body>
+</html>

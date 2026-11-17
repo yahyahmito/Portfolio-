@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yahya Hmito, engineering course</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Portfolio of Yahya Hmito, engineering student at Toulouse INP-ENSEEIHT.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html">Yahya Hmito</a>
+  <nav class="site-nav" aria-label="Main navigation"><a href="engineering.html" aria-current="page">Engineering</a><a href="projects.html">Projects</a><a href="career.html">Career</a><a href="engagement.html">Engagement</a><a href="contact.html">Contact</a></nav>
+</div></header>
+<main>
+<section class="page-head"><div class="wrap"><h1>Engineering course</h1><svg class="trace" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 18 H130 L144 6 H220"/><circle cx="228" cy="6" r="5"/></svg><p class="lead">Born and educated in Morocco, now an engineering student in Toulouse.</p></div></section>
+<section class="section"><div class="wrap cols">
+  <ol class="steps">
+    <li><p class="when">Morocco</p><h3>High school diploma</h3><p>Baccalaureate in mathematical sciences, option A.</p></li>
+    <li><p class="when">Two years</p><h3>Preparatory classes (CPGE), MP track</h3><p>Intensive mathematics and physics to prepare the competitive exams for French engineering schools.</p></li>
+    <li><p class="when">Now</p><h3>Toulouse INP-ENSEEIHT</h3><p>Engineering student in the Electronics, Electrical Energy and Automation department (3EA).</p></li>
+  </ol>
+  <div class="note">
+    <h2>What drives me</h2>
+    <p>I am fascinated by the world of microprocessors and semiconductors. I am always looking to expand my skills and explore the intersection between hardware and software innovation.</p>
+    <ul class="chips"><li>Electronics</li><li>Semiconductors</li><li>Automation</li><li>C</li><li>C++</li><li>MATLAB</li><li>Python</li><li>SQL</li></ul>
+  </div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap"><span>Yahya Hmito</span><span>Toulouse INP-ENSEEIHT, 3EA department</span></div></footer>
+<script>
+(function () {
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var ok = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
+      var sel = function () { var r = document.createRange(); r.selectNodeContents(b.previousElementSibling); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+      try { navigator.clipboard.writeText(b.getAttribute('data-copy')).then(ok, sel); } catch (e) { sel(); }
+    });
+  });
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js-motion');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  document.querySelectorAll('.rows > *, .duo > *, .steps > li, .gallery > *, .stats > *, .feature, .chart, .cols > *').forEach(function (el) {
+    if (el.getBoundingClientRect().top < innerHeight * 0.92) return;
+    var i = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+    el.style.setProperty('--d', Math.min(i, 5) * 0.07 + 's');
+    el.classList.add('reveal'); io.observe(el);
+  });
+})();
+</script>
+</body>
+</html>
